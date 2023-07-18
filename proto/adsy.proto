@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package adsy;
+
+service AdsySamplerService {
+    rpc SampleAdsy(SampleAdsyRequest) returns (SampleAdsyRespone) {}
+}
+
+message SampleAdsyRequest {
+    int32 sampleSize = 1;
+}
+
+message SampleAdsyRespone {
+    repeated int32 adsyIds = 1;
+}
