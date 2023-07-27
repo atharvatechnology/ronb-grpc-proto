@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package contribution;
+
+service ContributionService {
+    rpc RewardContrib(RewardContribRequest) returns (RewardContribResponse) {}
+}
+
+message RewardContribRequest {
+    int32 userId = 1;
+}
+
+message RewardContribResponse {
+    bool success = 1;
+}
